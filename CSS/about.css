@@ -1,0 +1,270 @@
+:root{
+    --primary-color: #000000;
+    --secondary-color: #B2BABB;
+    --bg-color: #f7f7f7;
+    --main-color: #ff731a;
+    --behave: 0.2s ease-in-out;
+}
+
+body{
+    margin: 0;
+    overflow: visible;
+    box-sizing: border-box;
+    background: black;
+    color: white;
+    font-size: 16px;
+    font-family: courier;
+    width: 100vw;
+}
+
+.web{
+    background-color: rgba(0, 0, 0, 0.6);
+    
+}
+
+.contain{
+    width: 85vw;
+    margin: auto;
+}    
+
+a{
+    color: white;
+    text-decoration: none;
+    transition: var(--behave);
+}
+
+a:hover{
+    color: var(--main-color);
+}
+
+header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 90px;
+}
+
+.stay{
+    margin: auto;
+    width: 95vw;
+}
+    
+.trans-head{
+    position: absolute;
+    left: 0;
+    transform: translate(-50% -50%);
+}
+
+.trans-head img{
+    width: 30%;
+}
+
+.navbar{
+    position: absolute;
+    transform: translate(-50% -50%);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contactbtn{
+    position: absolute;
+    right: 0;
+    transform: translate(-50% -50%);
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 14px;
+    text-transform: uppercase;
+    transition: var(--behave);
+}
+
+.contactbtn:hover{
+    opacity: 0.6;
+}
+
+.contactbtn a:hover{
+    color: white;
+}
+
+.navbar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2.6rem;
+}
+
+.navbar li{
+    font-size: 1rem;
+    list-style: none;
+}
+
+.navbar a:hover{
+    text-decoration: underline;
+    text-underline-offset: 12px;
+}
+
+.navbar a.current{
+    color: var(--main-color);
+    text-decoration: underline;
+    text-underline-offset: 12px;
+}
+
+h1{
+    font-family: impact;
+    font-size: 4rem;
+    color: gray;
+    text-align: right;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+span{
+    color: var(--main-color);
+}
+
+.line{
+    width: 85vw;
+    height: 3px;
+    background-color: var(--main-color);
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+section{
+    margin: 80px 0px;
+}
+
+section p{
+    font-size: 16px;
+    line-height: 1.2rem;
+}
+
+section li{
+    list-style-position: inside;
+    padding: 10px 0px;
+    font-weight: bold;
+}
+
+footer{
+    background: black;
+    padding: 14px;
+    color: white;
+    height: fit-content;
+    padding: 35px 12px;
+}
+
+.footer-flex{
+    display: flex;
+    flex-direction: row;
+    column-gap: 3rem;
+    row-gap: 1rem;
+    height: 340px;
+}
+
+.footer-L{
+    width: 50%;
+    position: relative;
+}
+
+.footer-L img{
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.footer-L h1{
+    position: absolute;
+    top: 90px;
+    left: 0;
+    font-size: 70px;
+    color: grey;
+    font-weight: bold;
+    font-family: impact;
+}
+
+.footer-L span{
+    color: var(--main-color);
+}
+
+.line4{
+    background: var(--main-color);
+    width: 350px;
+    height: 3px;
+    position: absolute;
+    top: 216px;
+}
+
+.footer-L h2{
+    position: absolute;
+    top: 200px;
+    left: 155px;
+    font-weight: bold;
+}
+
+.webstrlogos{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    height: 100px;
+    margin-top: 50px;
+}
+
+.webstrlogos img{
+    width: 50px;
+    margin: 0;
+    padding-left: 10px;
+    transition: var(--behave);
+}
+
+.webstrlogos img:hover{
+    opacity: 0.6;
+}
+
+.final{
+    position: absolute;
+    top: 260px;
+}
+
+.footer-R{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 3rem;
+    height: 60vh;
+}
+
+.footer-R h1{
+    font-family: impact;
+    font-size: 2rem;
+    color: gray;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+footer li{
+    padding-top: 10px;
+    list-style: square;
+}
+
+.curtain{
+    background-color: var(--main-color);
+    color: white;
+    padding: 14px 0px;
+    margin: 0;
+}
+
+.curtain p{
+    margin: 0;
+}
+
+.curtaingrid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: var(--behave);
+}
+
+.curtaingrid a:hover{
+    color: black;
+}
