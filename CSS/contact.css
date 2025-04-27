@@ -128,12 +128,18 @@ header{
     align-items: center;
     justify-items: center;
     gap: 3rem;
+    width: 75vw;
+    margin: auto;
+}
+
+.contact-grid:first-child{
+    margin: auto;
 }
 
 form{
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 input, textarea{
@@ -162,6 +168,10 @@ input::placeholder, textarea::placeholder{
     border-radius: 12px;
     background-color: var(--main-color);
     transition: var(--behave);
+    width: 120px;
+    margin: auto;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .btnxx:hover{
@@ -194,13 +204,34 @@ input::placeholder, textarea::placeholder{
 }
 
 .webstrlogos2{
+    width: 100%;
+    padding-top: 40px;
     margin: auto;
-    width: 80%;
+}
+
+.circle{
+    background-color: var(--main-color);
+    width: 20%;
+    height: 20%;
+
 }
 
 .webstrlogos2 img{
-    width: 10%;
-    
+    width: 20%;
+    transition: var(--behave);
+}
+
+.webstrlogos2 img:hover{
+    opacity: 0.6;
+}
+
+.card .contain{
+    width: 80%;
+    margin: auto;
+}
+
+.card img{
+    width: 100%;
 }
 
 footer{

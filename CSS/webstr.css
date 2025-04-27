@@ -190,7 +190,7 @@ header{
 .grid{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 4rem;
+    gap: 2rem;
     row-gap: 10rem;
     margin: 14px 0px;
     align-items: center;
@@ -578,4 +578,99 @@ footer li{
 
 .curtaingrid a:hover{
     color: black;
+}
+
+@media (max-width: 768px) {
+
+.hero{
+    
+}
+
+.hero p{
+    display: none;
+}    
+
+.hero h1{
+    max-width: 80%;
+}
+
+.name{
+    font-size: 6rem;
+    left: 20px;
+    top: 170px;
+    line-height: 5.3rem;
+}
+
+.linear{
+    position: absolute;
+    top: 340px;
+    width: 80%;
+    height: 3px;
+    background-color: var(--main-color);
+}
+
+.profession{
+    position: absolute;
+    top: 345px;
+    left: 160px;
+}
+
+.short{
+    font-size: 3rem;
+    left: 20px;
+    top: 450px;
+}
+
+.inter-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.lang{
+    display: none;
+}
+
+.grid p{
+    font-size: 1.3rem;
+}
+
+.grid span{
+
+}
+
+.section2{
+    margin: 0;
+}
+
+.abt{
+    font-size: 14px;
+    width: 90%;
+}
+
+.line2{
+    margin: 0;
+}
+
+.about-grid{
+    display: grid;
+    gap: 0.4rem;
+    grid-template-columns: 1fr 1fr 4fr;
+}
+
+.about h1{
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+input, textarea{
+    width: 100%;
+}
+
+.form{
+    gap: 1rem;
+}
+
+.request h1{
+    font-size: 2rem;
+}
 }
