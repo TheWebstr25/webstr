@@ -6,6 +6,10 @@
     --behave: 0.2s ease-in-out;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     overflow: visible;
@@ -41,6 +45,10 @@ h1{
 
 /**Individual-classes**/
 
+.hamburger{
+    display: none;
+}
+
 .hero{
     background: url(../images/20250419_080602.jpg);
     background-position: center;
@@ -48,7 +56,6 @@ h1{
     background-size: cover;
     color: white;
     min-height: 97vh;
-    position: relative;
 }
 
 .dark{
@@ -62,8 +69,9 @@ h1{
 
 .stay{
     position: fixed;
-    width: 95vw;
+    width: 100%;
     margin: auto;
+    padding: 0px 20px;
 }
 
 header{
@@ -122,6 +130,10 @@ header{
     font-size: 1rem;
 }
 
+#show{
+    display: none;
+}
+
 .navbar a:hover{
     text-decoration: underline;
     text-underline-offset: 12px;
@@ -136,10 +148,23 @@ header{
 .name{
     color: gray;
     font-family: impact;
-    font-size:140px;
-    position: absolute;
-    left: 50px;
-    top: 120px;
+    font-size: 150px;
+    margin-top: 1.8in;
+    line-height: 0.9;
+}
+
+.linear{
+    width: 54%;
+    height: 3px;
+    background: var(--main-color);
+    margin: 0;
+}
+
+.profession{
+    width: 54%;
+    text-align: right;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .short span, .name span{
@@ -148,27 +173,25 @@ header{
 
 .short{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    position: absolute;
-    top: 270px;
-    left: 100px;
-    width: 470px;
+    width: 50%;
     font-size: 60px;
+    margin-left: 50px;
 }
 
 .hero p{
     font-family: monospace;
     font-size: 12px;
+    color: gray;
 }
 
 .describe{
     position: absolute;
-    top:420px;
+    bottom:20px;
     left: 70px;
     width: 500px;
 }
 
 .describe2{
-    color: gray;
     position: absolute;
     top: 100px;
     right: 10px;
@@ -189,14 +212,21 @@ header{
 
 .grid{
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
     row-gap: 10rem;
     margin: 14px 0px;
     align-items: center;
 }
 
-.grid p{
+.grid2{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid p,.grid2 p{
     font-family: impact;
     text-transform: uppercase;
     margin: 0;
@@ -255,7 +285,7 @@ header{
 .about-grid{
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
-    gap: 3rem;
+    gap: 1rem;
     justify-items: center;
     align-items: center;
     padding: 20px 0px;
@@ -263,7 +293,8 @@ header{
 
 .nnnn{
     font-family: impact;
-    font-size: 4rem;
+    font-size: 3.5rem;
+    text-align: center;
     text-transform: uppercase;
     text-decoration: underline;
     text-underline-offset: 12px;
@@ -366,7 +397,7 @@ header{
     grid-template-columns: 2fr 1fr 1fr;
     align-items: center;
     justify-items: center;
-    gap: 3rem;
+    gap: 1rem;
 }
 
 form{
@@ -468,27 +499,20 @@ footer{
 .footer-flex{
     display: flex;
     flex-direction: row;
-    column-gap: 3rem;
+    column-gap: 1rem;
     row-gap: 1rem;
-    height: 340px;
+    height: fit-content;
 }
 
 .footer-L{
     width: 50%;
-    position: relative;
 }
 
 .footer-L img{
     width: 20%;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
 .footer-L h1{
-    position: absolute;
-    top: 90px;
-    left: 0;
     font-size: 70px;
     color: grey;
     font-weight: bold;
@@ -503,14 +527,9 @@ footer{
     background: var(--main-color);
     width: 350px;
     height: 3px;
-    position: absolute;
-    top: 170px;
 }
 
 .footer-L h2{
-    position: absolute;
-    top: 155px;
-    left: 155px;
     font-weight: bold;
 }
 
@@ -518,12 +537,12 @@ footer{
     display: flex;
     flex-direction: row;
     width: 40%;
-    height: 100px;
+    height: fit-content;
     margin: 0;
 }
 
 .webstrlogos img{
-    width: 50px;
+    width: 60px;
     margin: 0;
     padding-left: 10px;
     transition: var(--behave);
@@ -533,16 +552,11 @@ footer{
     opacity: 0.6;
 }
 
-.final{
-    position: absolute;
-    top: 220px;
-}
-
 .footer-R{
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    gap: 3rem;
+    gap: 1.4rem;
     height: 60vh;
 }
 
@@ -581,9 +595,17 @@ footer li{
 }
 
 @media (max-width: 768px) {
-
-.hero{
-    
+.hamburger{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transform: translate(-50% -50%);
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--main-color);
+    transition: var(--behave);
 }
 
 .hero p{
@@ -594,52 +616,83 @@ footer li{
     max-width: 80%;
 }
 
+#show{
+    display: block;
+}
+
+.contactbtn{
+    display: none;
+}
+
 .name{
-    font-size: 6rem;
-    left: 20px;
-    top: 170px;
-    line-height: 5.3rem;
+    font-size: 90px;
 }
 
 .linear{
-    position: absolute;
-    top: 340px;
     width: 80%;
     height: 3px;
     background-color: var(--main-color);
 }
 
 .profession{
-    position: absolute;
-    top: 345px;
-    left: 160px;
+    font-size: 1.6rem;
+    text-align: right;
+    width: 100%;
 }
 
 .short{
-    font-size: 3rem;
-    left: 20px;
-    top: 450px;
+    font-size: 1.6rem;
+    margin-left: 10px;
+    margin-top: 30px;
 }
 
 .inter-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.lang{
-    display: none;
+    
 }
 
 .grid p{
     font-size: 1.3rem;
 }
 
-.grid span{
-
+.grid, .grid2{
+    display: flex;
+    flex-direction: column;
 }
 
-.section2{
-    margin: 0;
+.grid2 .bigger{
+    order: 1;
+    text-align: center;
+}
+
+.grid2 img{
+    order: 2;
+}
+
+.contact-grid{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.line3{
+    width: 80%;
+    height: 3px;
+    order: 2;
+}
+
+.request{
+    order: 1;
+}
+
+.form{
+    order: 3;
+    width: 90%;
+}
+
+input, textarea{
+    width: 70%;
 }
 
 .abt{
@@ -647,19 +700,30 @@ footer li{
     width: 90%;
 }
 
-.line2{
-    margin: 0;
+.section2{
+    margin: 30px 0;
 }
 
 .about-grid{
-    display: grid;
-    gap: 0.4rem;
-    grid-template-columns: 1fr 1fr 4fr;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+
+.line2{
+    width: 80%;
+    height: 3px;
 }
 
 .about h1{
     font-size: 2rem;
     text-decoration: none;
+}
+
+.project-grid{
+    grid-template-columns: 1fr 1fr;
 }
 
 input, textarea{
@@ -672,5 +736,52 @@ input, textarea{
 
 .request h1{
     font-size: 2rem;
+}
+
+.footer-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-L{
+    width: 90%;
+    margin: auto;
+}
+
+.line{
+    margin: auto;
+    width: 80%;
+}
+
+.webstrlogos{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    width: 100%;    
+    margin: auto;
+}
+
+.webstrlogos img{
+    width: 100%;
+    padding-left: 3px;
+}
+
+.footer-R{
+    display: none;
+}
+
+.curtaingrid p{
+    font-size: 12px;
+    text-align: center;
+}
+
+.curtaingrid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 }
