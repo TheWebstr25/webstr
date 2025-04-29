@@ -335,8 +335,44 @@ footer li{
 
 @media(max-width: 768px){
 
+    .contact-grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
     .form{
-        padding-top: 65px;
+        padding-top: 15px;
+        margin: auto;
+        width: 95%;
+    }
+
+    .that{
+        order: 3;
+    }
+
+    .line3{
+        order: 2;
+        width: 90%;
+        height: 3px;
+        margin: auto;
+    }
+
+    .request{
+        order: 1;
+    }
+
+    .quote{
+        font-size: 4rem;
+    }
+
+    .quest{
+        font-size: 5rem;
+    }
+
+    input,textarea{
+        margin: auto;
     }
 
     .footer-flex{
